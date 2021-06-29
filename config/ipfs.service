@@ -1,0 +1,11 @@
+[Unit]
+Description=IPFS Daemon
+
+[Service]
+ExecStart=/usr/local/bin/ipfs daemon --enable-gc
+User=pi
+Environment="IPFS_PATH=/media/usb/ipfs"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

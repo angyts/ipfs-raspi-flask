@@ -1,0 +1,12 @@
+[Unit]
+Description=Flask Server to pin
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/flask/app.py
+User=pi
+Restart=always
+Environment="IPFS_PATH=/media/usb/ipfs"
+
+[Install]
+WantedBy=multi-user.target
+
